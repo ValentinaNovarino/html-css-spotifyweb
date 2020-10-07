@@ -8,13 +8,20 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-h1, h2, h3, h4 {
-    text-transform: uppercase;
+h1, h2, h3 {
+    font-weight: 600;
 }
 
-h3, h4 {
+h1 {
+    font-size: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h2, h3 {
     font-size: 13px;
-    font-weight: 600;
+    text-transform: uppercase;
     margin-bottom: 10px;
 }
 
@@ -85,12 +92,12 @@ i.fa-spotify {
     margin-top: 20px;
 }
 
-.list-lg h3, .list-lg h4 {
+.list-lg h2, .list-lg h3 {
     color: white;
     filter: opacity(0.5);
 }
 
-.list-lg h3:hover, .list-lg h4:hover {
+.list-lg h2:hover, .list-lg h3:hover {
     filter: opacity(1);
 }
 
@@ -194,10 +201,35 @@ header {
 .nav li a:hover {
     filter: opacity(1);
 }
-
+/*----------fine header----------*/
 main {
     height: calc(100vh - 180px);
     overflow-y: scroll;
+    padding: 20px 0;
+}
+
+main p {
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.artists-container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-wrap: wrap;
+}
+
+.artists {
+    width: 140px;
+    height: 140px;
+    margin: 20px 20px;
+}
+
+.artists.different {
+    border-radius: 100px;
 }
 
 footer {
@@ -239,6 +271,9 @@ footer {
     .primary {
         width: calc(100% - 200px);
     }
+    h1 {
+        font-size: 25px;
+    }
 }
 
 @media screen and (min-width: 992px) {
@@ -247,5 +282,8 @@ footer {
     }
     .nav {
         display: block;
+    }
+    h1 {
+        font-size: 30px;
     }
 }
