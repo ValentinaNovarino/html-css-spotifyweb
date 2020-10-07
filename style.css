@@ -83,8 +83,25 @@ i.fa-spotify {
     display: none;
     margin-left: 20px;
     margin-top: 20px;
+}
+
+.list-lg h3, .list-lg h4 {
     color: white;
     filter: opacity(0.5);
+}
+
+.list-lg h3:hover, .list-lg h4:hover {
+    filter: opacity(1);
+}
+
+.list-lg a {
+    color: white;
+    filter: opacity(0.5);
+    text-decoration: none;
+}
+
+.list-lg a:hover {
+    filter: opacity(1);
 }
 
 .list-lg span {
