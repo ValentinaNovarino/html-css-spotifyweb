@@ -141,24 +141,62 @@ i.fa-spotify {
 .sidebar-bottom p {
     display: none;
 }
-
 /*-------------fine sidebar--------------*/
-
-
-
-.principale {
-    width: calc(100% - 100px);
-    background-color: blue;
+.primary {
+    width: calc(100% - 80px);
+    background-image: linear-gradient(to bottom right, #d1ad00,  #000000);
 }
 
 header {
-    height: 100px;
-    background-color: orange;
+    height: 80px;
+}
+
+.hamburger-menu {
+    font-size: 30px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.hamburger-menu a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.nav {
+    height: 100%;
+    display: none;
+}
+
+.nav-list {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav li {
+    display:inline-block;
+    padding: 0 10px;
+}
+
+.nav li a {
+    text-decoration: none;
+    color: white;
+    filter: opacity(0.5);
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.nav li a:hover {
+    filter: opacity(1);
 }
 
 main {
-    height: calc(100vh - 200px);
-    background-color: pink;
+    height: calc(100vh - 180px);
     overflow-y: scroll;
 }
 
@@ -173,9 +211,6 @@ footer {
 @media screen and (min-width: 768px) {
     .sidebar {
         width: 200px;
-    }
-    .principale {
-        width: calc(100% - 200px);
     }
     .logo-lg {
         display: block;
@@ -200,5 +235,17 @@ footer {
     }
     .sidebar-bottom p {
         display: inline-block;
+    }
+    .primary {
+        width: calc(100% - 200px);
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .hamburger-menu {
+        display: none;
+    }
+    .nav {
+        display: block;
     }
 }
