@@ -14,7 +14,7 @@ h1, h2, h3 {
 
 h1 {
     font-size: 20px;
-    margin-left: 20px;
+    color: white;
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -28,16 +28,26 @@ h2, h3 {
 section {
     display: flex;
     flex-wrap: wrap;
+    height: calc(100vh - 80px);
 }
 
 .sidebar {
-    background-color: #1b200e;
+    background-color: #15180c;
     width: 80px;
 }
 
 .sidebar-top {
-    height: 60%;
+    height: 400px;
     padding-top: 20px;
+}
+
+.sidebar-bottom {
+    height: 234px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 10px;
 }
 
 .logo-icon {
@@ -113,15 +123,6 @@ i.fa-spotify {
 
 .list-lg span {
     font-size: 14px;
-}
-
-.sidebar-bottom {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    height: 40%;
-    padding-bottom: 10px;
 }
 
 .sidebar-bottom a {
@@ -203,7 +204,7 @@ header {
 }
 /*----------fine header----------*/
 main {
-    height: calc(100vh - 180px);
+    height: calc(100vh - 160px);
     overflow-y: scroll;
     padding: 20px 0;
 }
@@ -215,6 +216,16 @@ main p {
     font-weight: 600;
 }
 
+.first-box {
+    margin: auto;
+    max-width: 80%;
+}
+
+.second-box {
+    margin: auto;
+    max-width: 80%;
+}
+
 .artists-container {
    display: flex;
    align-items: center;
@@ -223,20 +234,108 @@ main p {
 }
 
 .artists {
-    width: 140px;
-    height: 140px;
+    width: 100px;
+    height: 100px;
     margin: 20px 20px;
 }
 
 .artists.different {
     border-radius: 100px;
 }
-
+/*---------fine main-----------*/
 footer {
-    background-color: yellow;
+    background-color: #363636;
     width: 100%;
-    height: 100px;
+    height: 80px;
+    display: flex;
 }
+
+.footer-left {
+    width: 40%;
+    display: flex;
+    background-color: red;
+}
+
+.footer-right {
+    display: none;
+}
+
+.footer-center {
+    background-color: blue;
+    width: 60%;
+}
+
+.footer-music-playing {
+    width: 60px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.music-playing {
+    height: 40px;
+    width: 40px;
+    margin-left: 5px;
+}
+
+.footer-music-title {
+    width: calc(100% - 80px);
+    margin-left: 5px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+p.title {
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+}
+
+p.artist {
+    font-size: 12px;
+    color: white;
+    filter: opacity(0.5);
+}
+
+.like {
+    display: flex;
+    align-items: center;
+}
+
+.like a {
+    color: white;
+}
+
+.media-player {
+    height: 100%;
+}
+
+.commands {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.commands a {
+    padding: 0 20px;
+    color: white;
+}
+
+.options {
+    display: flex;
+    align-items: center;
+}
+
+.options a {
+    padding: 0 5px;
+    color: white;
+}
+
+
 
 
 
@@ -274,6 +373,25 @@ footer {
     h1 {
         font-size: 25px;
     }
+    .artists {
+        width: 130px;
+        height: 130px;
+    }
+    footer {
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer-left {
+        width: 20%;
+    }
+    .footer-center {
+        width: 40%;
+    }
+    .footer-right {
+        width: 20%;
+        display: flex;
+        background-color: red;
+    }
 }
 
 @media screen and (min-width: 992px) {
@@ -285,5 +403,9 @@ footer {
     }
     h1 {
         font-size: 30px;
+    }
+    .artists {
+        width: 150px;
+        height: 150px;
     }
 }
