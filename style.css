@@ -15,7 +15,6 @@ h1, h2, h3 {
 h1 {
     font-size: 20px;
     color: white;
-    margin-top: 20px;
     margin-bottom: 20px;
     text-align: center;
 }
@@ -28,13 +27,15 @@ h2, h3 {
 
 section {
     display: flex;
-    flex-wrap: wrap;
+    flex-grow: 1;
     height: calc(100vh - 80px);
+    width: 100%;
 }
 
 .sidebar {
     background-color: #15180c;
     width: 80px;
+    flex-shrink: 0;
 }
 
 .sidebar-top {
@@ -152,7 +153,7 @@ i.fa-spotify {
 }
 /*-------------fine sidebar--------------*/
 .primary {
-    width: calc(100% - 80px);
+    flex-grow: 1;
     background-image: linear-gradient(to bottom right, #d1ad00,  #000000);
 }
 
@@ -205,7 +206,7 @@ header {
 }
 /*----------fine header----------*/
 main {
-    height: calc(100vh - 160px);
+    height: calc(100% - 80px);
     overflow-y: scroll;
     padding: 20px 0;
 }
@@ -264,43 +265,6 @@ footer {
     width: 80%;
 }
 
-.media-player-icon {
-    height: 50%;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-}
-
-.media-player-icon a {
-    color: white;
-    font-size: 25px;
-    padding: 0 20px;
-}
-
-.bar-media-player {
-    height: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.footer-music-playing {
-    height: 100%;
-    margin-right: 10px;
-    display: flex;
-    align-items: center;
-}
-
-.music-playing {
-    height: 40px;
-    width: 40px;
-    margin-left: 5px;
-}
-
-.footer-music-title {
-    display: none;
-}
-
 p.title {
     font-size: 14px;
     font-weight: 600;
@@ -326,13 +290,50 @@ p.artist {
     color: green;
 }
 
+.media-player-icon {
+    height: 50%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.media-player-icon a {
+    color: white;
+    font-size: 15px;
+    padding: 0 20px;
+}
+
+.bar-media-player {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-music-playing {
+    height: 100%;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.music-playing {
+    height: 40px;
+    width: 40px;
+    margin-left: 10px;
+}
+
+.footer-music-title {
+    display: none;
+}
+
 .slidecontainer-media {
   width: 100%;
 }
 
 .slider {
   -webkit-appearance: none;
-  width: 98%;
+  width: 100%;
   height: 3px;
   background: white;
   outline: none;
@@ -388,7 +389,7 @@ p.artist {
 
 @media screen and (min-width: 768px) {
     .sidebar {
-        width: 180px;
+        width: 200px;
     }
     .logo-lg {
         display: block;
@@ -438,13 +439,15 @@ p.artist {
         width: 22%;
         display: flex;
     }
+    .media-player-icon a {
+        color: white;
+        font-size: 25px;
+        padding: 0 20px;
+    }
 
 }
 
 @media screen and (min-width: 992px) {
-    .sidebar {
-        width: 200px;
-    }
     .hamburger-menu {
         display: none;
     }
